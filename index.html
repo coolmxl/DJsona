@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wraper {
+            width: 100%;
+            min-width: 1000px;
+            position: relative;
+            overflow: hidden;
+        }
+        .wraper {
+            height: 3900px;
+        }
+        /* bg start */
+        #bg-green{
+            transition: all 0.5s ease;
+            background-position: -130px;
+        }
+        .bg-green .bg-1{
+            height: 300px;
+            background: url(./img/green_1.jpg)no-repeat -160px 0px;
+        }
+        .bg-green .bg-2{
+            height: 300px;
+            background: url(./img/green_2.jpg)no-repeat -160px 0px;
+        }
+        .bg-green .bg-3{
+            height: 300px;
+            background: url(./img/green_3.jpg)no-repeat -160px 0px;
+        }
+        .bg-green .bg-4{
+            height: 1600px;
+            background: url(./img/green_4.jpg)no-repeat -160px 0px;
+        }
+        .bg-green .bg-5{
+            height: 1600px;
+            background: url(./img/green_5.jpg)no-repeat -160px 0px;
+        }
+        .bg-red .bg-1{
+            height: 300px;
+            background: url(./img/red_1.jpg)no-repeat -160px 0px;
+        }
+        .bg-red .bg-2{
+            height: 300px;
+            background: url(./img/red_2.jpg)no-repeat -160px 0px;
+        }
+        .bg-red .bg-3{
+            height: 300px;
+            background: url(./img/red_3.jpg)no-repeat -160px 0px;
+        }
+        .bg-red .bg-4{
+            height: 1600px;
+            background: url(./img/red_4.jpg)no-repeat -160px 0px;
+        }
+        .bg-red .bg-5{
+            height: 1600px;
+            background: url(./img/red_5.jpg)no-repeat -160px 0px;
+        }
+        .bg-purple .bg-1{
+            height: 300px;
+            background: url(./img/purple_1.jpg)no-repeat -160px 0px;
+        }
+        .bg-purple .bg-2{
+            height: 300px;
+            background: url(./img/purple_2.jpg)no-repeat -160px 0px;
+        }
+        .bg-purple .bg-3{
+            height: 300px;
+            background: url(./img/purple_3.jpg)no-repeat -160px 0px;
+        }
+        .bg-purple .bg-4{
+            height: 1600px;
+            background: url(./img/purple_4.jpg)no-repeat -160px 0px;
+        }
+        .bg-purple .bg-5{
+            height: 1600px;
+            background: url(./img/purple_5.jpg)no-repeat -160px 0px;
+        }
+        /* bg end */
+        /* header start */
+        .wb{
+            margin: 0 auto;
+            position: absolute;
+            width: 1000px;
+            height: 5273px;
+            margin-left: auto;
+            margin-right: auto;
+            top: 0px;
+            left: 230px;
+        }
+        .header {
+            height: 860px;
+            position: absolute;
+        }
+        .green-page{
+            background: url(./img/green_sona.png) 0 0 no-repeat;
+        }
+        .red-page {
+            background: url(./img/red_sona.png) 0 0 no-repeat;
+        }
+        .purple-page {
+            background: url(./img/purple_sona.png) 0 0 no-repeat;
+        }
+        .header h2 {
+            width: 216px;
+            height: 61px;
+            display: block;
+            top: 10px;
+            left: 40px;
+        }
+        .nav {
+            width: 600px;
+            padding-left: 320px;
+        }
+        .green-page .nav a {
+            color: #88fcfe;
+        }
+        .nav{
+            position: relative;
+            top: -61px;
+        }
+        .nav a {
+            padding: 0 37px;
+            height: 66px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: center;
+            line-height: 66px;
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+        }
+        .green-page .nav a:hover {
+            color: #77e9ff;
+            text-shadow: 0 0 5px #77e9ff, 0 0 10px #77e9ff, 0 0 15px #77e9ff, 0 0 40px #77e9ff, 0 0 70px #77e9ff, 0 0 100px #77e9ff;
+        }
+        .logo {
+            width: 220px;
+            height: 150px;
+            top: 80px;
+            left: 50px;
+            background: url(./img/logo.png) 0 0 no-repeat;
+        }
+        .ht {
+            display: block;
+            overflow: hidden;
+            text-indent: -999em;
+        }
+        .slogan{
+            background: url(./img/green.png) 0 0 no-repeat;
+        }
+        .green-state  {
+            background: url(./img/green.png) 0 0 no-repeat;
+        }
+        .red-state {
+            background: url(./img/red.png) 0 0 no-repeat;
+        }
+        .purple-state {
+            background: url(./img/purple.png) 0 0 no-repeat;
+        }
+
+        .slogan {
+            position:absolute;
+            width: 525px;
+            height: 263px;
+            top: 264px;
+            left: -130px;
+        }
+        .ht {
+            display: block;
+            overflow: hidden;
+            text-indent: -999em;
+        }
+        .green-page .tips-txt {
+            color: #b8ddff;
+        }
+        .tips-txt {
+            letter-spacing: 8px;
+            position: absolute;
+            font-size: 20px;
+            top: 537px;
+            left: 37px;
+        }
+        .music {
+            width: 180px;
+            height: 38px;
+            top: 592px;
+            left: 40px;
+            position: absolute;
+        }
+        .ovh {
+            overflow: hidden;
+        }
+        .music a.music-purple {
+            background-position: 0 -127px;
+        }
+        .music a.music-red {
+            background-position: 0 -89px;
+        }
+        .music a.music-green {
+            background-position: 0 -51px;
+        }
+        .music a {
+            width: 38px;
+            height: 38px;
+            float: left;
+            margin-right: 22px;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .spr {
+            background: url(./img/spr.png) no-repeat;
+        }
+        .ht {
+            display: block;
+            overflow: hidden;
+            text-indent: -999em;
+        }
+        @media screen and (max-width: 1200px) {
+            .wb{
+                left:10px;
+            }
+            #bg-green div{
+                background-position: -160px;
+            }
+        }    
+        /* content start */
+        .content{
+            position: relative;
+            top: 867px;
+        }
+        .sec-1 {
+            height: 1150px;
+        }
+        .green-page .sec-1 h3 {
+            color: #88fcfe;
+        }
+        .sec-1 h3 {
+            font-size: 46px;
+            font-weight: normal;
+            line-height: 48px;
+        }
+        .green-page .sec-1 h4 {
+            color: #829fdc;
+        }
+        .sec-1 h4 {
+            text-align: center;
+            font-size: 22px;
+            line-height: 36px;
+            padding-top: 65px;
+            font-weight: normal;
+            padding-bottom: 100px;
+            text-shadow: 0 0 3px #000;
+        }
+        #sona-pic{
+            width: 612px;
+            height: 344px;
+            background: url(./img/transform-cover.jpg)
+        }
+        .sec-1-txt {
+            width: 340px;
+            padding-top: 45px;
+            line-height: 30px;
+            position: relative;
+            top: -355px;
+            float: right;
+        }
+        .tit {
+            color: #88fcfe;
+            padding-bottom: 8px;
+            font-weight: normal;
+            font-size: 28px;
+        }
+        .desc {
+            color: #829fdc;
+            font-size: 14px;
+        }
+        .sec-1-share {
+            width: 485px;
+            height: 188px;
+            line-height: 30px;
+            clear: both;
+            position: relative;
+            top: -150px;
+        }
+        /* sec-2 start */
+        .sec-2 {
+            height: 550px;
+        }
+        .green-page .sec-2-video {
+            border: 1px solid #34296e;
+        }
+        .sec-2-video {
+            width: 612px;
+            height: 347px;
+            float: left;
+            overflow: hidden;
+        }
+        .sec-2 h3 {
+            font-size: 46px;
+            font-weight: normal;
+            line-height: 48px;
+            color: #4fd0fe;
+            padding-bottom: 25px;
+        }
+        #donggan a{
+            font-size: 28px;
+            padding-right: 10px;
+        }
+        .sec-2-txt{
+            width: 340px;
+            padding-top: 55px;
+            line-height: 22px;
+            float: right;
+        }
+        .sec-2-txt h5 {
+            line-height: 20px;
+            padding: 15px 0 50px;
+            color: #829fdc;
+        }
+
+        .fn {
+            font-weight: normal;
+        }
+        .f16 {
+            font-size: 16px;
+        }
+        .green-page-btn {
+            border: 1px solid #07427c;
+            background: #01b7ba;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#01dbde),to(#01797c));
+            background: -moz-linear-gradient(top,#01dbde,#01797c);
+            background: -o-linear-gradient(top,#01dbde,#01797c);
+            display: block;
+            color: #fff;
+            width: 221px;
+            height: 38px;
+            line-height: 36px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 1px 1px 1px #000;
+            margin-bottom: 10px;
+        }
+        .red-page-btn {
+            border: 1px solid #630f24;
+            background: #d07f00;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#d07f00),to(#8a2d09));
+            background: -moz-linear-gradient(top,#d07f00,#8a2d09);
+            background: -o-linear-gradient(top,#d07f00,#8a2d09);
+            display: block;
+            color: #fff;
+            width: 221px;
+            height: 38px;
+            line-height: 36px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 1px 1px 1px #000;
+            margin-bottom: 10px;
+        }
+        .purple-page-btn {
+            border: 1px solid #34296e;
+            background: #654bf1;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#8974ff),to(#4631b2));
+            background: -moz-linear-gradient(top,#8974ff,#4631b2);
+            background: -o-linear-gradient(top,#8974ff,#4631b2);
+            display: block;
+            color: #fff;
+            width: 221px;
+            height: 38px;
+            line-height: 36px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 1px 1px 1px #000;
+            margin-bottom: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .default {
+            width: 221px;
+            height: 38px;
+            line-height: 36px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 1px 1px 1px #000;
+            margin-bottom: 10px;
+            border: 1px solid #07427c;
+            background: #01b7ba;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#01dbde),to(#01797c));
+            background: -moz-linear-gradient(top,#01dbde,#01797c);
+            background: -o-linear-gradient(top,#01dbde,#01797c);
+            display: block;
+        }
+        /* sec-3 start*/
+        .purple-page .sec-3 h3 {
+            color: #4fd0fe;
+        }
+        .green-page .sec-3 h3 {
+            color: #88fcfe;
+        }
+        .sec-3 h3 {
+            font-size: 46px;
+            font-weight: normal;
+            line-height: 48px;
+            padding-bottom: 40px;
+        }
+        .green-page .sec-3 h3 span {
+            color: #829fdc;
+        }
+        .sec-3 h3 span {
+            font-size: 27px;
+            display: block;
+            line-height: 28px;
+        }
+        .sec-4 .txt-box {
+            padding-top: 100px;
+        }
+        .txt-box{
+            position: relative;
+            left: 660px;
+            top: -256px;
+        }
+        #picTab {
+            width: 980px;
+            height: 83px;
+            position: relative;
+            top: -59px;
+        }
+        #picTab li {
+            width: 167px;
+            height: 83px;
+            float: left;
+            cursor: pointer;
+        }
+        .green-page .sec-3-tab li.on img {
+            border: 2px solid #4fd0fe;
+        }
+        .green-page .sec-3-tab li img {
+            border: 1px solid #34296e;
+        }
+        .sec-3-tab li.on img {
+            width: 141px;
+            height: 79px;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        /* sec-4 */
+        .sec-4 {
+            position: relative;
+            top:15px;
+        }
+        .green-page .sec-4 h3 {
+            color: #88fcfe;
+        }
+
+        .sec-4 h3 {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 28px;
+            padding-bottom: 40px;
+        }
+        .sec-4 ul li {
+            display: inline-block;
+            margin-right: 17px;
+            color: cornflowerblue;
+            opacity: 0.5;
+        }
+        .sec-4 ul li a:hover{
+            opacity: 1;
+        }
+        .green-page .wallpaper li a {
+            border: 1px solid #07407a;
+        }
+
+        .wallpaper li a {
+            width: 310px;
+            height: 175px;
+            background: #000;
+            margin-bottom: 10px;
+            display: block;
+        }
+        /* 固定nav */
+        element.style {
+            display: block;
+        }
+
+        .green-page .nav-fix {
+            background: url(./img/green_fix.png) right 0 no-repeat;
+        }
+        .nav-fix {
+            width: 173px;
+            height: 250px;
+            position: fixed;
+            bottom: 50px;
+            right: 10px;
+            padding: 141px 0 0 65px;
+            display: none;
+        }
+        .nav-fix .mv {
+            position: absolute;
+            bottom: 240px;
+            right: 0;
+        }
+
+        .nav-fix li {
+            width: 173px;
+            height: 41px;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+        .nav-fix li a.link-mv {
+            color: #fff32e;
+            font-weight: bold;
+            font-size: 16px;
+            outline: medium none;
+            text-align: center;
+            text-decoration: underline;
+            position: relative;
+            padding-right: 3px;
+            width: 170px;
+        }
+        .icon-mv {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url(./img/new-spr.png) no-repeat 0 0;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+        }
+        .nav-fix li a {
+            width: 173px;
+            height: 41px;
+            line-height: 39px;
+            text-align: center;
+            color: #fff;
+            display: block;
+        }
+        /* 上一个 */
+        .green-page .arr-prev {
+            background-position: 0 -106px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+        .green-page .arr-spr {
+            background: url(./img/green_arr.png) no-repeat;
+        }
+        .arr-prev {
+            width: 88px;
+            height: 108px;
+        }
+        .green-page .arr-next {
+            background-position: -83px -106px;
+            position: absolute;
+            top: 320px;
+            left: 1426px;
+        }
+        .arr-next{
+            width: 88px;
+            height: 108px;
+        }
+        /* mv播放 */
+        .pop-close {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            font-size: 70px;
+            font-family: sinsum;
+            font-weight: bold;
+            text-align: left;
+            color: #0e59a5;
+            position: absolute;
+            top: -7px;
+            right: -44px;
+        }
+        .pop-con {
+            width: 850px;
+            height: 550px;
+            border: 5px solid #0e59a5;
+            background: #000;
+        }
+        #shadow{
+            position: absolute;
+            opacity: 0.5;
+            filter:alpha(opacity=50);
+            bottom:0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background:black;
+            z-index: 100;
+            display: none;
+        }
+        .sec-5{
+            font-size: 28px;
+            line-height: 28px;
+            position: absolute;
+            top: 10;
+            left: 432px;
+        }
+        .sec-5 div{
+            position: relative;
+            top: 200px;
+            color: #10b2b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="wraper green-page" id="wraper" >
+        <div id="wraper-bg">
+            <div>
+                <div class="wp bg pa bg-green" id="bg-green" >
+                    <div class="wp bg-1 po"></div>
+                    <div class="wp bg-2 po"></div>
+                    <div class="wp bg-3 po"></div>
+                    <div class="wp bg-4 po"></div>
+                    <div class="wp bg-5 po"></div>
+                </div>
+            </div>
+            <div>
+                <div class="wp bg pa bg-red" id="bg-red" style="display: none">
+                    <div class="wp bg-1"></div>
+                    <div class="wp bg-2"></div>
+                    <div class="wp bg-3"></div>
+                    <div class="wp bg-4"></div>
+                    <div class="wp bg-5"></div>
+                </div>
+            </div>
+            <div>
+                <div class="wp bg pa bg-purple" id="bg-purple" style="display: none">
+                    <div class="wp bg-1"></div>
+                    <div class="wp bg-2"></div>
+                    <div class="wp bg-3"></div>
+                    <div class="wp bg-4"></div>
+                    <div class="wp bg-5"></div>
+                </div>
+            </div>
+        </div>
+        <a class="arr-spr ht pa arr-prev" href="javascript:;" onclick="up()" title="上一个曲目">上一个曲目</a>       
+        <a class="arr-spr ht pa arr-next" href="javascript:;" onclick="down()"title="下一个曲目">下一个曲目</a>
+        <div class="pop" id="popCon" style="display: none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -280px; margin-left: -455px;" data-milodialog="1" role="dialog" tabindex="-1">
+            <a class="pop-close" href="javascript:;" onclick="closeMv()">×</a>
+            <div class="pop-con">
+                <div id="popVideo">
+                </div>		
+            </div>
+        </div>
+        <div id="shadow" style="display: none;"></div>
+        <div class="container wb">
+            <div class="header">
+                <h2 id="sona" class="green-page"></h2>
+                <p class="nav ovh">
+                    <a href="javascript:;" onclick="platBeat()">打起节拍</a>
+                    <a href="javascript:;" onclick="musicPlay()">音乐试听</a>
+                    <a href="javascript:;" onclick="wallPaper()">插图欣赏</a>
+                </p>
+                <a class="pa logo ht" href="http://lol.qq.com/" rel="英雄联盟官方网站"></a>
+                <span class="pa slogan ht" id="state"></span>
+                <div class="pa tips-txt">　选择曲目！</div>
+                <div class="pa music ovh" id="musicBox">
+                    <a class="spr ht music-green on" href="javascript:;" title="动感" rel="green">动感</a>
+                    <a class="spr ht music-red" href="javascript:;" title="震荡" rel="red">震荡</a>
+                    <a class="spr ht music-purple" href="javascript:;" title="空灵" rel="purple">空灵</a>
+                </div>
+            </div>  
+            <div class="content">
+                <div class="sec-1" >
+                    <h3 id="sec-1">打起节拍<span>终极呈现</span></h3>
+                    <h4>娑娜挟持了音波！娑娜将英雄联盟的音乐转变成了<br>高能动感节拍、强力震荡声波与飘逸空灵韵律。</h4>
+                    <div id="sona-pic">	</div>			
+                    <div class="sec-1-txt fr">
+                        <h5 class="tit">动态音乐风格</h5>
+                        <p class="desc">在游戏中，DJ娑娜可以在以下三首不断进化的乐曲中择一弹奏-动感、震荡与空灵。每一首都有其独特风格并能让娑娜彻底改头换面，从制服和乐器到她技能的视觉与感觉。她总会以动感风开场，但可以通过在游戏内聊天框里输入/toggle来切换成下一个曲调。音轨将总按以下顺序进行：动感→震荡→空灵→动感，没有混音版。</p>
+                    </div>  
+                    <div class="sec-1-share">
+                        <h5 class="tit">音乐分享</h5>
+                        <p class="desc">音乐制作出来也是用来分享的，如果您的队友正在使用DJ娑娜，您也可以按下Tab键，调出左上角的娑娜头像旁的小音符，通过点击头像右侧的小音符，让娑娜在游戏中为你弹奏，让她的专属音乐透过你的耳机传递。尽管你不能选择她的弹奏曲目，但你可以通过再次点击按钮来停止收听她的演奏。</p>						
+                    </div> 
+                </div>
+                <div class="sec-2" >
+                    <h3 id="sec-2">音乐试听</h3>
+                    <div class="sec-2-video fl ovh" id="mvC">
+                        <video width="612px" id="0box" style="display: block" height="347px" controls="controls" >
+                            <source src="http://47.103.201.64/dj/video/0.mp4" type="video/mp4" />
+                            <source src="http://47.103.201.64/dj/video/0.ogg" type="video/ogg" />
+                            <source src="http://47.103.201.64/dj/video/0.webm" type="video/webm" />
+                            <object data="http://47.103.201.64/dj/video/0.mp4" width="612px" height="366px">
+                                <embed src="http://47.103.201.64/dj/video/0.swf"  style="background: #000000" width="612px" height="366px" align="middle"/>
+                            </object>
+                        </video> 
+                        <!-- <video width="612px" style="display: none" height="347px" controls="controls"  >
+                            <source src="./video/1.mp4" type="video/mp4" />
+                            <source src="./video/2.ogg" type="video/ogg" />
+                            <source src="./video/2.webm" type="video/webm" />
+                            <object data="./video/2.mp4" width="612px" height="366px">
+                                <embed src="./video/2.swf"  style="background: #000000" width="612px" height="366px" align="middle"/>
+                            </object>
+                        </video> 
+                        <video width="612px" style="display: none" height="347px" controls="controls"  >
+                            <source src="./video/2.mp4" type="video/mp4" />
+                            <source src="./video/2.ogg" type="video/ogg" />
+                            <source src="./video/2.webm" type="video/webm" />
+                            <object data="./video/2.mp4" width="612px" height="366px">
+                                <embed src="./video/2.swf"  style="background: #000000" width="612px" height="366px" align="middle"/>
+                            </object>
+                        </video> -->
+                    </div>
+                    <div class="sec-2-txt fr">
+                        <p class="sec-2-txt-1 f16">
+                            <div id="donggan">
+                                <a  href="javascript:;" onclick="musicGreen();mvChange(0)">动感</a>
+                                <a  href="javascript:;" onclick="musicRed();mvChange(1)">震荡</a>
+                                <a  href="javascript:;" onclick="musicPurple();mvChange(2)">空灵</a>
+                            </div>
+                        </p>
+                        <h5 class="f16 fn">您可以在这里下载DJ娑娜的所有音乐哦。</h5>
+                        <a class="download-btn default" href="http://down.qq.com/lol/ad/DJ_Sona_Music/DJ_Sona_Music.zip">下载MP3</a>
+                       
+                    </div>
+                </div>
+                <div class="sec-3" >
+                    <h3 id="sec-3">插图欣赏
+                        <span id="skillTitle">动感专辑</span>
+                    </h3>
+                    <div class="sec-3-tab-box">
+                        <div class="pr sec-3-tab-con">
+                            <div class="pa pic-box" id="picCon">
+                                <img  style="display: none" src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/pic_0.jpg" alt="">
+                                <img style="display: none"  src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/pic_1.jpg" alt="">
+                                <img style="display: none" src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/pic_2.jpg" alt="">
+                                <img style="display: block" src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/pic_3.jpg" alt="">
+                            </div>
+                            <div class="txt-box">
+                                <h5 class="f28 fn tit">资料边框&amp;召唤师图标</h5>
+                                <p class="f14 desc">说明：用独特的图标与横幅来播送你的音乐曲风。</br>在娑娜的多个召唤师图标中择一装备，就可以为你</br>的资料页面添加自定义边框。</p>							
+                            </div>
+                        </div>				
+                    </div>
+                    <ul class="sec-3-tab opa" id="picTab">
+                        <li rel="green" class="" style=" opacity: 0.5;" onclick="picTab(0)"><img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/sec_4_tab_1.jpg" alt=""></li>
+                        <li rel="red" class="" style=" opacity: 0.5;" onclick="picTab(1)"><img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/sec_4_tab_2.jpg" alt=""></li>
+                        <li rel="purple" class="" style=" opacity: 0.5;" onclick="picTab(2)"><img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/sec_4_tab_3.jpg" alt=""></li>
+                        <li rel="none" class="on" style=" opacity: 1;" onclick="picTab(3)"><img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/sec_4_tab_4.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="sec-4" >
+                    <h3 id="sec-4">桌面壁纸</h3>
+                    <ul class="pr wallpaper ovh">
+                        <li class="pa wallpaper-1" style="opacity: 1">
+                            <a target="_blank" href="http://lol.qq.com/cp/LOL-Ban/DJSonaKinetic.jpg">
+                                <img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/wallpaper_1.jpg" alt="">
+                                <span>动感</span>							
+                            </a>
+                            桌面壁纸
+                        </li>
+                        <li class="pa wallpaper-2">
+                            <a target="_blank" href="http://lol.qq.com/cp/LOL-Ban/DJSonaConcussive.jpg">
+                                <img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/wallpaper_2.jpg" alt="">
+                                <span>震荡</span>							
+                            </a>
+                            桌面壁纸
+                        </li>
+                        <li class="pa wallpaper-3">
+                            <a target="_blank" href="http://lol.qq.com/cp/LOL-Ban/DJSonaEthereal.jpg">
+                                <img src="http://ossweb-img.qq.com/images/lol/act/a20150130sona/wallpaper_3.jpg" alt="">
+                                <span>空灵</span>							
+                            </a>
+                            桌面壁纸
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec-5">
+
+                </div>
+                <ul class="nav-fix" style="display: none;">
+                    <li class="mv"><a class="link-mv" href="javascript:mvShow()">观看MV<i class="icon-mv"></i></a></li>
+                    <li><a class="link-normal" onclick="platBeat()" href="javascript:;">打起节拍</a></li>
+                    <li><a class="link-normal" onclick="musicPlay()" href="javascript:;">音乐视听</a></li>
+                    <li><a class="link-normal" onclick="wallPaper()" href="javascript:;">插图欣赏</a></li>
+                    <li><a class="link-normal" id="btn-top" href="javascript:;">返回顶部</a></li>
+                </ul>
+            </div>     
+        </div>
+    </div>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        window.onload = function(){
+            mvShow();
+        }
+        function musicGreen(){
+                // 背景
+                $("#bg-green").css({"display":"block"})
+                $("#bg-red").css({"display":"none"})
+                $("#bg-purple").css({"display":"none"})
+                // 文字
+                $("#sona").removeClass("red-page");
+                $("#sona").removeClass("purple-page");
+                $("#sona").addClass("green-page");
+                //  状态
+                $("#state").removeClass("red-state");
+                $("#state").removeClass("purple-state");
+                $("#state").addClass("green-state");
+                // 按钮
+                $(".download-btn").removeClass("default")
+                $(".download-btn").removeClass("red-page-btn")
+                $(".download-btn").removeClass("purple-page-btn")
+                $(".download-btn").addClass("green-page-btn")             
+            }
+        function musicRed(){
+            $("#bg-green").css({"display":"none"})
+            $("#bg-red").css({"display":"block"})
+            $("#bg-purple").css({"display":"none"})    
+            $("#sona").removeClass("green-page");
+            $("#sona").removeClass("purple-page");
+            $("#sona").addClass("red-page");
+            $("#state").removeClass("green-state");
+            $("#state").removeClass("purple-state");
+            $("#state").addClass("red-state");
+            $(".download-btn").removeClass("default")
+            $(".download-btn").removeClass("green-page-btn")
+            $(".download-btn").removeClass("purple-page-btn")
+            $(".download-btn").addClass("red-page-btn")
+        }
+        function musicPurple(){
+            $("#bg-green").css({"display":"none",})
+            $("#bg-red").css({"display":"none",})
+            $("#bg-purple").css({"display":"block"})
+            $("#sona").removeClass("green-page");
+            $("#sona").removeClass("red-page");
+            $("#sona").addClass("purple-page");
+            $("#state").removeClass("red-state");
+            $("#state").removeClass("green-state");
+            $("#state").addClass("purple-state");
+            $(".download-btn").removeClass("default")
+            $(".download-btn").removeClass("green-page-btn")
+            $(".download-btn").removeClass("red-page-btn")
+            $(".download-btn").addClass("purple-page-btn")
+        }
+        function picTab(arg){
+            $("#picTab li:eq("+arg+")").addClass("on")
+            $("#picTab li:eq("+arg+")").siblings().removeClass("on")
+            $("#picTab li:eq("+arg+")").css("opacity", "1")
+            $("#picTab li:eq("+arg+")").siblings().css("opacity", "0.5")
+            $("#picCon img:eq("+arg+")").css("display","block")
+            $("#picCon img:eq("+arg+")").siblings().css("display","none")
+        }
+        $(window).scroll(function(){
+            var top = $(this).scrollTop();
+            // console.log(top);
+            if(top > 400 ){
+                $(".nav-fix").css("display","block")
+            }
+            if(top < 400){
+                $(".nav-fix").css("display","none")
+            }
+        })
+        // 音乐
+        function mvChange(x){
+            // 内容随着x值变化
+            // 视频
+            $("#mvC").html("");//清空元素中的内容
+            var aObj=$(`<video width="612px" id="${x}box" style="display: block" height="347px" controls="controls" id="${x}"  >
+                            <source src="http://47.103.201.64/dj/video/${x}.mp4" type="video/mp4" />
+                            <source src="http://47.103.201.64/dj/video/${x}.ogg" type="video/ogg" />
+                            <source src="http://47.103.201.64/dj/video/${x}.webm" type="video/webm" />
+                            <object data="http://47.103.201.64/dj/video/${x}.mp4" width="612px" height="366px">
+                                <embed src="http://47.103.201.64/dj/video/${x}.swf"  style="background: #000000" width="612px" height="366px" align="middle"/>
+                            </object>
+                        </video> `);
+            $("#mvC").append(aObj);
+            // 图片
+            $("#picTab li:eq("+x+")").addClass("on")
+            $("#picTab li:eq("+x+")").siblings().removeClass("on")
+            $("#picTab li:eq("+x+")").css("opacity", "1")
+            $("#picTab li:eq("+x+")").siblings().css("opacity", "0.5")
+            $("#picCon img:eq("+x+")").css("display","block")
+            $("#picCon img:eq("+x+")").siblings().css("display","none")
+            // 壁纸
+            $(".wallpaper li:eq("+x+")").css("opacity", "1")
+            $(".wallpaper li:eq("+x+")").siblings().css("opacity", "0.5")
+        }
+        // mv
+        function mvShow(){
+            $("#shadow").css("display","block");
+            $("#popCon").css({"display":"block","position":"fixed"})
+            var aObj=$(`
+            <video  autoplay=autoplay style="display: block"  controls="controls" width="850px" height="550px" >
+                <source src="http://47.103.201.64/dj/video/kenitic.mp4" type="video/mp4" />
+                <source src="http://47.103.201.64/dj/video/kenitic.mp4" type="video/ogg" />
+                <source src="http://47.103.201.64/dj/video/kenitic.mp4" type="video/webm" />
+                <object data="http://47.103.201.64/dj/video/kenitic.mp4" >
+                    <embed src="http://47.103.201.64/dj/video/kenitic.mp4"   align="middle"/>
+                </object>
+            </video> 
+            `)
+            $("#popVideo").append(aObj);
+        }
+        function closeMv(){
+            $("#popVideo").html("");
+            $("#shadow").css("display","none");
+            $("#popCon").css({"display":"none"})
+        }
+        function platBeat(){
+            $('html,body').animate({scrollTop:$("#sec-1").offset().top}, 800);
+        }
+        function musicPlay(){
+            $('html,body').animate({scrollTop:$("#sec-2").offset().top}, 800);
+        }
+        function wallPaper(){
+            $('html,body').animate({scrollTop:$("#sec-3").offset().top}, 800);
+        }
+        // 上下切换
+        function up(){
+            if(document.getElementById("0box")) {//js判断元素是否存在
+                musicPurple();
+                picTab(2);
+                mvChange(2);
+            }
+            else if(document.getElementById("1box")){
+                musicGreen();
+                picTab(0);
+                mvChange(0);
+            }
+            else if(document.getElementById("2box")){
+                musicRed();
+                picTab(1);
+                mvChange(1);
+            }
+        }
+        function down(){
+            if(document.getElementById("0box")) {
+                musicRed();
+                picTab(1);
+                mvChange(1);
+            }
+            else if(document.getElementById("1box")){
+                musicPurple();
+                picTab(2);
+                mvChange(2);
+            }
+            else if(document.getElementById("2box")){
+                musicGreen();
+                picTab(0);
+                mvChange(0);
+            }
+        }
+        //返回顶部
+        $("#btn-top").click(function(){
+            $('body,html').animate({scrollTop:0},300);
+        });
+        $(function(){
+            $("#musicBox a:eq(0)").on("click", function(){
+                musicGreen();
+                picTab(0);
+                mvChange(0);
+            })
+            $("#musicBox a:eq(1)").click(function(){
+                musicRed();
+                picTab(1);
+                mvChange(1);      
+            })
+            $("#musicBox a:eq(2)").click(function myclick3(){
+                musicPurple();
+                picTab(2);
+                mvChange(2);
+            })
+
+        })
+    </script>        
+</body>
+</html>
